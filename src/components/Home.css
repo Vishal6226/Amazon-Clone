@@ -1,0 +1,61 @@
+.home {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1500px;
+  }
+  
+  .home__row {
+    display: flex;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  body {
+    margin: 0;
+  }
+  
+  .dj-slider {
+    background-image: url("https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/EOSS/PC_3000-Deals-Unrec._CB634359069_.jpg");
+    min-height: 200px;
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid black;
+    z-index: -1;
+    margin-bottom: -150px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
+  
+  .dj-slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .dj-slide {
+    width: calc(100%);    /*  added, full width - margin  */
+    flex-shrink: 0;
+    
+    display: flex;                /*  added  */
+    align-items: center;          /*  added  */
+    justify-content: center;      /*  added  */
+    
+    animation: slide-it 20s infinite;
+  }
+  
+  @keyframes slide-it {
+    0%    { transform: translateX(0); }
+    25%   { transform: translateX( calc(-100%) ); }
+    50%   { transform: translateX( calc(-200%) ); }
+    100%  { transform: translateX( calc(-300%) ); }
+  }
+  
+  .home__image {
+    width: 100%;
+    z-index: -1;
+    margin-bottom: -150px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    animation : changeImage 10s linear infinite
+  }
